@@ -1,0 +1,614 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f4" />
+
+    <title>Независимый строительный контроль — Имя Фамилия</title>
+    <meta
+      name="description"
+      content="Независимый строительный контроль (технадзор) и функции технического заказчика. Частные и коммерческие объекты. Защита интересов собственника."
+    />
+
+    <meta
+      property="og:title"
+      content="Независимый строительный контроль — Имя Фамилия"
+    />
+    <meta
+      property="og:description"
+      content="Технадзор и функции технического заказчика. Защита интересов собственника. Частные и коммерческие объекты."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://source.unsplash.com/0DREnEBBII4/1600x900"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Имя Фамилия — независимый строительный контроль",
+        "description": "Независимый строительный контроль (технадзор) и функции технического заказчика. Защита интересов собственника. Частные и коммерческие объекты.",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Центральный регион РФ (уточнить)"
+        },
+        "telephone": "+7 (900) 000-00-00",
+        "email": "mail@example.com",
+        "url": "https://example.com",
+        "sameAs": ["https://t.me/username"],
+        "serviceType": [
+          "Строительный контроль (технадзор)",
+          "Функции технического заказчика",
+          "Приемка работ",
+          "Сопровождение строительства"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="header" data-header>
+      <div class="container header__in">
+        <a class="brand" href="#" aria-label="На главную">
+          <div class="brand__name">Имя Фамилия</div>
+          <div class="brand__meta">
+            Строительный контроль · Технический заказчик
+          </div>
+        </a>
+
+        <!-- Desktop nav (hidden on mobile) -->
+        <nav class="nav" aria-label="Навигация">
+          <a href="./experience.html">Опыт</a>
+          <a href="./materials.html">Материалы</a>
+          <a href="./process.html">Как работаю</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <!-- Desktop CTA (hidden on mobile) -->
+        <div class="header__actions">
+          <a class="btn btn--sm btn--ghost" href="tel:+79000000000"
+            >Позвонить</a
+          >
+          <a
+            class="btn btn--sm btn--accent"
+            href="https://t.me/username"
+            target="_blank"
+            rel="noopener"
+            >Telegram</a
+          >
+        </div>
+
+        <!-- Mobile burger -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          data-burger
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu: includes nav + CTAs -->
+      <div class="mnav" id="mobileMenu" hidden data-mnav>
+        <div class="mnav__inner">
+          <div class="mnav__top">
+            <div class="mnav__title">Меню</div>
+            <button
+              class="mnav__close"
+              type="button"
+              aria-label="Закрыть меню"
+              data-burger-close
+            >
+              ×
+            </button>
+          </div>
+
+          <nav class="mnav__links" aria-label="Навигация (мобильная)">
+            <a href="./experience.html">Опыт</a>
+            <a href="./materials.html">Материалы</a>
+            <a href="./process.html">Как работаю</a>
+            <a href="./contacts.html">Контакты</a>
+          </nav>
+
+          <div class="mnav__actions">
+            <a
+              class="btn btn--block btn--accent"
+              href="https://t.me/username"
+              target="_blank"
+              rel="noopener"
+              >Написать в Telegram</a
+            >
+            <a class="btn btn--block btn--ghost" href="tel:+79000000000"
+              >Позвонить</a
+            >
+          </div>
+
+          <p class="mnav__hint">Прототип: контакты/регион — заглушки.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__main">
+            <div class="kicker">
+              <span class="dot" aria-hidden="true"></span>
+              Частные и коммерческие объекты · без госзаказа
+            </div>
+
+            <h1>Независимый строительный контроль и технический заказчик</h1>
+
+            <p class="lead">
+              Защищаю интересы собственника: качество, нормы, объёмы, фиксация
+              нарушений.
+            </p>
+
+            <div class="hero__cta">
+              <a
+                class="btn btn--accent"
+                href="https://t.me/username"
+                target="_blank"
+                rel="noopener"
+                >Написать в Telegram</a
+              >
+              <button class="btn btn--ghost" type="button" data-focus-tabs>
+                Выбрать раздел
+              </button>
+            </div>
+
+            <p class="hero__note">
+              Опишите задачу — подскажу формат участия (без обязательств).
+            </p>
+          </div>
+
+          <aside class="card hero__aside" aria-label="Коротко">
+            <p class="aside__title">Коротко</p>
+            <ul class="mini">
+              <li>
+                <span class="mini__k">Роль:</span> независимый контроль
+                заказчика
+              </li>
+              <li>
+                <span class="mini__k">Фокус:</span> качество, сроки, риски
+              </li>
+              <li>
+                <span class="mini__k">Формат:</span> выезд / сопровождение
+              </li>
+              <li>
+                <span class="mini__k">Регион:</span> Центральный РФ (уточнить)
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- TABS -->
+      <section class="tabs" id="tabs" aria-label="Разделы">
+        <div class="container">
+          <div class="tabs__head">
+            <div class="tabs__title">
+              <h2>По пунктам</h2>
+              <p class="sub">Без длинных текстов — только главное.</p>
+            </div>
+          </div>
+
+          <div class="tabs__nav" role="tablist" aria-label="Вкладки">
+            <button
+              class="tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="t1"
+              id="tab-t1"
+              data-tab="t1"
+            >
+              Что делаю
+            </button>
+            <button
+              class="tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="t2"
+              id="tab-t2"
+              data-tab="t2"
+            >
+              Опыт
+            </button>
+            <button
+              class="tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="t3"
+              id="tab-t3"
+              data-tab="t3"
+            >
+              Инструменты
+            </button>
+            <button
+              class="tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="t4"
+              id="tab-t4"
+              data-tab="t4"
+            >
+              Как работаю
+            </button>
+            <button
+              class="tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="t5"
+              id="tab-t5"
+              data-tab="t5"
+            >
+              Контакт
+            </button>
+          </div>
+
+          <div class="tabs__panelWrap card">
+            <!-- 1 -->
+            <section
+              class="panel is-active"
+              id="t1"
+              role="tabpanel"
+              aria-labelledby="tab-t1"
+              tabindex="0"
+            >
+              <div class="panel__grid">
+                <div class="panel__text">
+                  <h3>Что делаю</h3>
+                  <p class="p">
+                    Чтобы стройка была управляемой — по качеству, объёмам и
+                    рискам.
+                  </p>
+
+                  <ul class="bullets">
+                    <li>проверяю соответствие проекту и требованиям</li>
+                    <li>фиксирую нарушения: факты, измерения, фото</li>
+                    <li>контролирую устранение до приёмки этапа</li>
+                    <li>помогаю заказчику в переговорах с подрядчиком</li>
+                  </ul>
+
+                  <div class="panel__cta">
+                    <a
+                      class="btn btn--accent"
+                      href="https://t.me/username"
+                      target="_blank"
+                      rel="noopener"
+                      >Описать задачу</a
+                    >
+                    <a class="btn btn--ghost" href="./process.html"
+                      >Подробнее →</a
+                    >
+                  </div>
+                </div>
+
+                <div class="panel__media" aria-label="Фото">
+                  <img
+                    src="https://source.unsplash.com/9DVbpLvDLCo/1200x900"
+                    alt="Строительный объект"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <!-- 2 -->
+            <section
+              class="panel"
+              id="t2"
+              role="tabpanel"
+              aria-labelledby="tab-t2"
+              tabindex="0"
+            >
+              <div class="panel__grid">
+                <div class="panel__text">
+                  <h3>Опыт — 4 кейса</h3>
+                  <p class="p">Формат «паспорт проекта»: тип, масштаб, роль.</p>
+
+                  <div class="caseGrid" aria-label="Кейсы">
+                    <article class="case">
+                      <h4 class="case__t">
+                        Реконструкция админ. здания — Москва
+                      </h4>
+                      <div class="case__m">3 200 м² · внутренняя отделка</div>
+                      <div class="tagRow">
+                        <span class="tag">Технадзор</span
+                        ><span class="tag">Качество</span
+                        ><span class="tag">Приёмка этапов</span>
+                      </div>
+                    </article>
+
+                    <article class="case">
+                      <h4 class="case__t">Нулевой цикл завода — Калуга</h4>
+                      <div class="case__m">36 000 м² · пром. объект</div>
+                      <div class="tagRow">
+                        <span class="tag">Контроль этапов</span
+                        ><span class="tag">Объёмы</span
+                        ><span class="tag">Фиксация</span>
+                      </div>
+                    </article>
+
+                    <article class="case">
+                      <h4 class="case__t">Капремонт ОКН — (город)</h4>
+                      <div class="case__m">600 м² · внутренняя отделка</div>
+                      <div class="tagRow">
+                        <span class="tag">Требования</span
+                        ><span class="tag">Качество</span
+                        ><span class="tag">Замечания</span>
+                      </div>
+                    </article>
+
+                    <article class="case">
+                      <h4 class="case__t">Благоустройство — (город/регион)</h4>
+                      <div class="case__m">61 000 м² · территория</div>
+                      <div class="tagRow">
+                        <span class="tag">Объёмы</span
+                        ><span class="tag">Приёмка</span
+                        ><span class="tag">Результат</span>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="panel__cta">
+                    <a class="btn btn--ghost" href="./experience.html"
+                      >Все проекты →</a
+                    >
+                    <a class="btn btn--ghost" href="./materials.html"
+                      >Примеры отчётов →</a
+                    >
+                  </div>
+                </div>
+
+                <div class="panel__media" aria-label="Фото">
+                  <img
+                    src="https://source.unsplash.com/0DREnEBBII4/1200x900"
+                    alt="Современное здание"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <!-- 3 -->
+            <section
+              class="panel"
+              id="t3"
+              role="tabpanel"
+              aria-labelledby="tab-t3"
+              tabindex="0"
+            >
+              <div class="panel__grid">
+                <div class="panel__text">
+                  <h3>Инструменты и измерения</h3>
+                  <p class="p">
+                    Не «на глаз» — измерения + фиксация, чтобы требования были
+                    исполнимы.
+                  </p>
+
+                  <ul class="bullets">
+                    <li>геометрия, примыкания, отклонения (по ситуации)</li>
+                    <li>проверка критичных узлов на этапах</li>
+                    <li>фотофиксация + привязка замечаний</li>
+                    <li>чек-листы и отчёт по выезду</li>
+                  </ul>
+
+                  <div class="panel__cta">
+                    <a class="btn btn--ghost" href="./materials.html"
+                      >Материалы →</a
+                    >
+                    <a
+                      class="btn btn--accent"
+                      href="https://t.me/username"
+                      target="_blank"
+                      rel="noopener"
+                      >Задать вопрос</a
+                    >
+                  </div>
+                </div>
+
+                <div class="panel__media" aria-label="Фото">
+                  <img
+                    src="https://source.unsplash.com/7KLa-xLbSXA/1200x900"
+                    alt="Процесс измерений"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <!-- 4 -->
+            <section
+              class="panel"
+              id="t4"
+              role="tabpanel"
+              aria-labelledby="tab-t4"
+              tabindex="0"
+            >
+              <div class="panel__grid">
+                <div class="panel__text">
+                  <h3>Как работаю</h3>
+                  <p class="p">
+                    Пошагово — чтобы вы понимали результат каждого этапа.
+                  </p>
+
+                  <ul class="bullets">
+                    <li>анализ задачи и рисков</li>
+                    <li>контроль на объекте (этап/узел)</li>
+                    <li>замечания: факты + рекомендации</li>
+                    <li>проверка устранения / приёмка</li>
+                  </ul>
+
+                  <div class="panel__cta">
+                    <a class="btn btn--ghost" href="./process.html"
+                      >Страница «Как работаю» →</a
+                    >
+                    <a
+                      class="btn btn--accent"
+                      href="https://t.me/username"
+                      target="_blank"
+                      rel="noopener"
+                      >Подсказать формат</a
+                    >
+                  </div>
+                </div>
+
+                <div class="panel__media" aria-label="Фото">
+                  <img
+                    src="https://source.unsplash.com/sAlWjm2huck/1200x900"
+                    alt="Планирование"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <!-- 5 -->
+            <section
+              class="panel"
+              id="t5"
+              role="tabpanel"
+              aria-labelledby="tab-t5"
+              tabindex="0"
+            >
+              <div class="panel__grid">
+                <div class="panel__text">
+                  <h3>Контакт</h3>
+                  <p class="p">
+                    Коротко опишите объект и стадию работ — отвечу, нужен ли
+                    технадзор и какой формат участия оптимален.
+                  </p>
+
+                  <div class="panel__cta">
+                    <a
+                      class="btn btn--accent"
+                      href="https://t.me/username"
+                      target="_blank"
+                      rel="noopener"
+                      >Telegram</a
+                    >
+                    <a class="btn btn--ghost" href="tel:+79000000000"
+                      >Телефон</a
+                    >
+                    <a class="btn btn--ghost" href="./contacts.html"
+                      >Контакты →</a
+                    >
+                  </div>
+
+                  <form class="form" id="leadForm">
+                    <div class="row">
+                      <div class="field">
+                        <label for="name">Имя</label>
+                        <input
+                          id="name"
+                          name="name"
+                          placeholder="Как к вам обращаться"
+                          autocomplete="name"
+                        />
+                      </div>
+                      <div class="field">
+                        <label for="phone">Телефон</label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          placeholder="+7 ___ ___-__-__"
+                          autocomplete="tel"
+                        />
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label for="msg">Задача</label>
+                      <textarea
+                        id="msg"
+                        name="msg"
+                        placeholder="Тип объекта, стадия, что нужно проконтролировать"
+                      ></textarea>
+                    </div>
+                    <div class="form__actions">
+                      <button class="btn btn--accent" type="submit">
+                        Сформировать сообщение в Telegram
+                      </button>
+                      <p class="hint">Прототип: контакты/регион — заглушки.</p>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="panel__media" aria-label="Фото">
+                  <img
+                    src="https://source.unsplash.com/nxm0Zgy5bTo/1200x900"
+                    alt="Рабочая среда"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROUTES -->
+      <section class="routes" aria-label="Страницы сайта">
+        <div class="container">
+          <div class="routes__grid">
+            <a class="route" href="./experience.html">
+              <div class="route__t">Опыт</div>
+              <p class="route__d">Все проекты и карточки.</p>
+            </a>
+            <a class="route" href="./materials.html">
+              <div class="route__t">Материалы</div>
+              <p class="route__d">Примеры отчётов и чек-листы.</p>
+            </a>
+            <a class="route" href="./process.html">
+              <div class="route__t">Как работаю</div>
+              <p class="route__d">Регламент и результат.</p>
+            </a>
+            <a class="route" href="./contacts.html">
+              <div class="route__t">Контакты</div>
+              <p class="route__d">Связь и форма обращения.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container foot">
+        <div>
+          © <span id="y"></span> Имя Фамилия · Независимый строительный контроль
+        </div>
+        <div class="foot__links">
+          <a href="./experience.html">Опыт</a>
+          <span>·</span>
+          <a href="./contacts.html">Контакты</a>
+          <span>·</span>
+          <a href="https://t.me/username" target="_blank" rel="noopener"
+            >Telegram</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
