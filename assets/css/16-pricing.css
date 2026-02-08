@@ -1,0 +1,144 @@
+.pricing {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+}
+
+/* Table shell */
+.pricing-table {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Header */
+.pricing-table__head {
+  display: grid;
+  grid-template-columns: 1.6fr 0.7fr 0.7fr;
+  background: linear-gradient(to right, rgba(20, 41, 61, 0.06), transparent);
+  border-bottom: 1px solid var(--line);
+}
+
+.pricing-table__th {
+  padding: 18px 18px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pricing-table__th--center {
+  text-align: center;
+}
+
+/* Rows */
+.pricing-table__row {
+  display: grid;
+  grid-template-columns: 1.6fr 0.7fr 0.7fr;
+  border-bottom: 1px solid var(--line);
+}
+
+.pricing-table__row:last-child {
+  border-bottom: none;
+}
+
+.pricing-table__td {
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.pricing-table__td--center {
+  text-align: center;
+}
+
+.pricing-table__title {
+  font-weight: 500;
+}
+
+.pricing-table__hint {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pricing-table__sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Notes */
+.pricing-notes {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+
+.pricing-notes__item {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.pricing-notes__item + .pricing-notes__item {
+  margin-top: 10px;
+}
+
+/* CTA */
+.pricing-cta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.pricing-cta__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pricing-table__head,
+  .pricing-table__row {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-table__th--center,
+  .pricing-table__td--center {
+    text-align: left;
+  }
+
+  .pricing-table__head {
+    display: none; /* на мобиле заголовки не нужны */
+  }
+
+  .pricing-table__row {
+    padding: 14px 0;
+  }
+
+  .pricing-table__td {
+    padding: 8px 16px;
+  }
+
+  .pricing-table__td--center strong::before {
+    content: "Внутри/за ЦКАД: ";
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .pricing-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }

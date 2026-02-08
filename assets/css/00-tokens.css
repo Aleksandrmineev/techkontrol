@@ -1,0 +1,40 @@
+:root {
+  /* Base */
+  --bg: #ffffff;
+  --bg-alt: #f2f4f6;
+  --text: #1f1f1f;
+  --muted: #5b6670;
+  --line: rgba(20, 41, 61, 0.14);
+
+  /* Brand */
+  --brand: #14293d; /* navy */
+  --brand-2: #1b3954;
+
+  /* HERO (новое) */
+  --hero-bg-1: #0f2233;
+  --hero-bg-2: #142e45;
+
+  --hero-h1: #f3f6f9; /* мягкий белый */
+  --hero-text: rgba(255, 255, 255, 0.72);
+  --hero-muted: rgba(255, 255, 255, 0.6);
+  --hero-accent: #9fbbd4; /* стальной голубой */
+  --hero-line: rgba(255, 255, 255, 0.22);
+
+  /* Buttons on hero (новое) */
+  --hero-btn: #2e5c4f; /* зелёный контроля */
+  --hero-btn-hover: #356c5d;
+  --hero-btn-text: #ffffff;
+
+  /* Layout */
+  --container: 1120px;
+  --radius: 18px;
+  --radius-lg: 24px;
+  --smart-compact-h: 72px;
+
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Helvetica Neue", sans-serif;
+  --h1: clamp(44px, 7vw, 86px);
+  --h2: clamp(26px, 3vw, 40px);
+
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}

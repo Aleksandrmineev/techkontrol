@@ -1,0 +1,110 @@
+/* =========================
+   SCOPE (Область ответственности)
+   ========================= */
+
+.section__head {
+  margin-bottom: 26px;
+}
+.section__title {
+  margin: 0 0 10px;
+  font-size: var(--h2);
+  letter-spacing: -0.02em;
+}
+.section__subtitle {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.scope-card {
+  position: relative;
+  /* border-radius: 22px; */
+
+  padding: 22px 22px 20px;
+  border-left: 2px solid var(--brand);
+  padding-left: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* вертикальный акцент */
+.scope-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 22px 0 0 22px;
+
+  background: linear-gradient(to bottom, var(--brand), var(--hero-accent));
+
+  opacity: 0.9;
+}
+
+/* hover */
+.scope-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.scope-card__title {
+  font-size: 19px;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.scope-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scope-card__list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+/* аккуратные маркеры */
+.scope-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--hero-accent);
+}
+
+.scope-footnote {
+  margin: 16px 0 0;
+  color: color-mix(in oklab, var(--brand) 55%, var(--muted));
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .scope-grid {
+    grid-template-columns: 1fr;
+  }
+  .scope-card {
+    padding: 16px 16px 14px;
+  }
+}
