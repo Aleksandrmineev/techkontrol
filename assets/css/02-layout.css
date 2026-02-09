@@ -139,11 +139,14 @@ h2 {
 
 .btn--ghost {
   background: transparent;
-  color: var(--hero-h1);
-  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--hero-btn);
+  border-color: var(--hero-btn);
 }
+
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(20, 41, 61, 0.04);
+  color: var(--hero-btn-hover);
+  border-color: var(--hero-btn-hover);
 }
 
 .footer {

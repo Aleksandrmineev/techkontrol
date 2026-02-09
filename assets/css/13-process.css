@@ -139,6 +139,7 @@
 .timeline__note {
   color: var(--text);
   font-weight: 600;
+  padding-left: 10px;
 }
 
 .timeline__more {
