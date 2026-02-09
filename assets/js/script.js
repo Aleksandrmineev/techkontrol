@@ -267,3 +267,34 @@ animatedElements.forEach((el) => observer.observe(el));
 
   update();
 })();
+
+(function () {
+  const el = document.querySelector("[data-rotator]");
+  if (!el) return;
+
+  const phrases = [
+    "Приёмка новостройки",
+    "Контроль ремонта и реконструкции",
+    "Анализ проектной документации",
+    "Фиксация нарушений и актов",
+  ];
+
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  let index = 0;
+  el.textContent = phrases[0];
+
+  if (prefersReduced) return;
+
+  setInterval(() => {
+    el.classList.add("is-changing");
+
+    setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      el.textContent = phrases[index];
+      el.classList.remove("is-changing");
+    }, 300);
+  }, 4000);
+})();
