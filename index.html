@@ -3,8 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Иван Петров — строительный контроль</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <title>Иван Петров — строительный контроль и независимая экспертиза</title>
+
+    <meta
+      name="description"
+      content="Иван Петров — независимый эксперт в области строительного контроля, технадзора и экспертизы. Работа в интересах заказчика. Анализ проектов, проверка качества работ, приёмка объектов."
+    />
+    <meta name="author" content="Иван Петров" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Иван Петров — строительный контроль" />
+    <meta
+      property="og:description"
+      content="Независимая строительная экспертиза, технадзор и контроль качества работ."
+    />
+    <meta
+      property="og:image"
+      content="https://stroikontrol.ru/assets/img/og-image.jpg"
+    />
+    <meta property="og:url" content="https://stroikontrol.ru/" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0f2f45" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icon/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="/assets/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/icon/site.webmanifest" />
+    <link rel="shortcut icon" href="/assets/icon/favicon.ico" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/00-tokens.css" />
     <link rel="stylesheet" href="assets/css/01-base.css" />
     <link rel="stylesheet" href="assets/css/02-layout.css" />
@@ -15,6 +58,16 @@
     <link rel="stylesheet" href="assets/css/14-independence.css" />
     <link rel="stylesheet" href="assets/css/15-competence.css" />
     <link rel="stylesheet" href="assets/css/16-pricing.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Иван Петров — строительная экспертиза",
+        "url": "https://stroikontrol.ru",
+        "description": "Независимый строительный контроль и технический надзор.",
+        "areaServed": "Россия"
+      }
+    </script>
   </head>
 
   <body class="page">
@@ -55,10 +108,10 @@
           <p class="hero-title__note">Работа в интересах заказчика</p>
 
           <div class="hero-actions">
-            <a class="btn btn--primary" href="#contacts"
+            <a class="btn btn--primary" href="#contact"
               >Бесплатная консультация</a
             >
-            <a class="btn btn--ghost" href="#rates">Тарифы</a>
+            <a class="btn btn--ghost" href="#pricing">Тарифы</a>
           </div>
         </div>
 
@@ -90,19 +143,19 @@
       </div>
 
       <div class="menu__body">
-        <a class="menu__link" href="#control" data-menu-link>Что контролирую</a>
-        <a class="menu__link" href="#services" data-menu-link>Услуги</a>
+        <a class="menu__link" href="#scope" data-menu-link>Область</a>
+        <a class="menu__link" href="#process" data-menu-link>Методика</a>
         <a class="menu__link" href="#independence" data-menu-link
           >Независимость</a
         >
-        <a class="menu__link" href="#about" data-menu-link>О себе</a>
-        <a class="menu__link" href="#rates" data-menu-link>Тарифы</a>
-        <a class="menu__link" href="#contacts" data-menu-link>Контакты</a>
+        <a class="menu__link" href="#competence" data-menu-link>Компетенции</a>
+        <a class="menu__link" href="#pricing" data-menu-link>Тарифы</a>
+        <a class="menu__link" href="#contact" data-menu-link>Контакт</a>
 
         <div class="menu__cta">
-          <a class="btn btn--primary btn--block" href="#contacts" data-menu-link
-            >Получить консультацию</a
-          >
+          <a class="btn btn--primary btn--block" href="#contact" data-menu-link>
+            Получить консультацию
+          </a>
         </div>
       </div>
     </nav>
@@ -537,11 +590,16 @@
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__brand">
-          <div class="footer__name">Иван Петров</div>
-          <div class="footer__tag">Строительный контроль</div>
-          <div class="footer__note">
-            Работа исключительно в интересах заказчика.
-          </div>
+          <div class="footer__name">ИП Иван Петров</div>
+          <!-- <div class="footer__tag">Строительный контроль</div> -->
+
+          <!-- <div class="footer__note">
+            Независимая экспертная деятельность в области строительства.
+          </div> -->
+
+          <div class="footer__legal">В интересах заказчика</div>
+
+          <a href="/requisites.html" class="footer__requisites"> Реквизиты </a>
         </div>
 
         <div class="footer__contacts">
@@ -579,6 +637,13 @@
         </div>
       </div>
     </footer>
+    <button class="totop" type="button" aria-label="Наверх" data-totop hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path
+          d="M12 6l-7 7 1.41 1.41L11 9.83V20h2V9.83l4.59 4.58L19 13z"
+        ></path>
+      </svg>
+    </button>
 
     <script src="assets/js/script.js"></script>
   </body>

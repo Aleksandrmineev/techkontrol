@@ -243,3 +243,27 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach((el) => observer.observe(el));
+
+(() => {
+  const btn = document.querySelector("[data-totop]");
+  if (!btn) return;
+
+  const showAfter = Math.round(window.innerHeight * 0.7);
+
+  const update = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    const shouldShow = y > showAfter;
+
+    btn.hidden = !shouldShow;
+    btn.classList.toggle("is-visible", shouldShow);
+  };
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update, { passive: true });
+
+  update();
+})();
