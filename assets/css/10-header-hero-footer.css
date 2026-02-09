@@ -60,12 +60,6 @@
 }
 
 /* Brand */
-.brand {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
 .brand__name {
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -76,6 +70,24 @@
   font-size: 12px;
   margin-top: 4px;
   color: var(--hero-muted);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand__logo {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 auto;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
 }
 
 /* Compact bar line + brand colors */
