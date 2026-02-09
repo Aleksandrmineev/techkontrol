@@ -9,31 +9,30 @@
   if (year) year.textContent = String(new Date().getFullYear());
 
   // Compact header on scroll (switch when hero ends)
+
   const smart = document.querySelector("[data-smart]");
-  const hero = document.querySelector(".smart__hero");
+  const hero = document.querySelector("[data-hero]");
 
   const onScroll = () => {
     if (!smart || !hero) return;
 
     const y = window.scrollY;
+    const heroRect = hero.getBoundingClientRect();
+    const heroHeight = hero.offsetHeight;
 
-    const heroTop = hero.offsetTop;
-    const heroH = hero.offsetHeight;
-    const heroEnd = heroTop + heroH;
+    // начало fade после 8% hero
+    const fadeStart = heroHeight * 0.08;
+    const fadeEnd = heroHeight * 0.35;
 
-    // Фаза 1: начать гасить контент, когда прошли ~25% hero
-    const fadeStart = heroTop + Math.round(heroH * 0.05);
-    const fadeEnd = heroTop + Math.round(heroH * 0.3); // к этому моменту почти исчезло
+    const progress = Math.min(
+      1,
+      Math.max(0, (y - fadeStart) / (fadeEnd - fadeStart))
+    );
 
-    smart.classList.toggle("is-fading", y >= fadeStart);
+    hero.style.setProperty("--fade", String(progress));
 
-    // Фаза 2: compact когда hero практически закончился
-    smart.classList.toggle("is-compact", y >= heroEnd - 80);
-
-    // Дополнительно: прогресс затухания (0..1) для идеального контроля
-    const tRaw = (y - fadeStart) / Math.max(1, fadeEnd - fadeStart);
-    const t = Math.min(1, Math.max(0, tRaw));
-    smart.style.setProperty("--fade", String(t));
+    // compact когда hero почти ушёл
+    smart.classList.toggle("is-compact", y > heroHeight - 80);
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -266,6 +265,7 @@ animatedElements.forEach((el) => observer.observe(el));
   window.addEventListener("resize", update, { passive: true });
 
   update();
+  const hero = document.querySelector(".smart__hero");
 })();
 
 (function () {

@@ -39,3 +39,11 @@ button {
 [hidden] {
   display: none !important;
 }
+
+.contact-cta .contact-cta__actions {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
