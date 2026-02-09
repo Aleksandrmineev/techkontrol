@@ -365,3 +365,28 @@
     gap: 8px;
   }
 }
+
+.footer__legal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.footer__menu {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  gap: 8px 40px;
+}
+
+.footer__menu > * {
+  align-self: end;
+}
+
+@media (max-width: 768px) {
+  .footer__menu {
+    grid-auto-flow: row;
+    grid-template-rows: repeat(2, auto);
+  }
+}
